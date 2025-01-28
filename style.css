@@ -1,0 +1,131 @@
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin : 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background: #0F62FE;    
+}
+
+#head-text{
+    margin-top: 50px;
+    margin-left: 10px;
+    font-family: sans-serif;
+    color:#0F62FE;
+}
+
+.container{
+    width: 40%;
+    top: 30%;
+    left: 50%;
+    background: white;
+    border-radius:1px;
+    min-width: 450px;
+    position: absolute;
+    min-height: 100px;
+    transform: translate(-50%,-50%); 
+}
+
+#newtask{
+    position: relative;
+    padding: 30px 20px;
+}
+#newtask input{
+    width: 75%;
+    height: 45px;
+    padding: 12px;
+    color: #111111;
+    font-weight: 500;
+    position: relative;
+    border-radius: 5px;
+    font-family: sans-serif;
+    font-size: 15px;
+    border: 2px solid #33b1ff;
+}
+#newtask input focus{
+    outline: none;
+    border-color: #0d75ec;
+}
+#newtask button{
+    position: relative;
+    float: right;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: #0F62FE;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+    width: 20%;
+    height: 45px;
+    border-radius: 5px;
+    font-family: sans-serif;
+}
+.tasks{
+    position: absolute;
+    border-radius: 0px;
+    width: 100%;
+    /*positionn relative*/
+    background-color: #ffffff;
+    padding: 30px 20px;
+    margin-top: 0px;
+    justify-content: space-between;
+}
+.tasks.overflow{
+    overflow-y: auto;
+    max-height: 300px;
+}
+.tasks::-webkit-scrollbar{
+    width: 10px;
+}
+.tasks::-webkit-scrollbar-track{
+    background: #BAE6FF;
+    border-radius: 25px;
+}
+.tasks::-webkit-scrollbar-track{
+    background: #0D75EC;
+    border-radius: 25px;
+}
+.tasks::-webkit-scrollbar-thumb{
+    background: #0D75EC;
+    border-radius: 25px;
+}
+
+.task{
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-between;
+    cursor: poiner;
+    height: 50px;
+    margin-bottom: 8px;
+    padding: 10px 10px;
+    display: flex;
+    width: 100%;
+}
+.delete{
+    right: -5px;
+    padding: 5px 5px;
+    background: #ffffff;
+    border-radius: 4px;
+    transform-origin: top right;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease;
+    z-index: 10;
+}
+#check-task{
+    margin-right: 20px;
+}
+.task label{
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 400px;
+    display: flex;
+    align-items: flex-start;
+}
+.ask labelp.checked{
+    text-decoration: line-through;
+}
